@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Browser Tab Logo (Favicon) - Localhost Test -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%2300f0ff' d='M497.9 14.21c-18.96-18.95-49.7-18.95-68.66 0l-71.18 71.18 97.32 97.32 71.18-71.18c18.96-18.96 18.96-49.7 0-68.66zM329.4 114.1L12.79 430.7c-7.85 7.85-12.02 18.7-11.51 29.83l6.78 80.12c1.23 14.54 13.41 25.86 28 25.86 1.05 0 2.11-.06 3.17-.18l80.12-6.78c11.13-.94 21.98-5.11 29.83-12.96l316.6-316.6-136.38-135.89z'/></svg>" type="image/svg+xml">
+
+<script src="https://cdn.tailwindcss.com"></script>
+    <title>Pen Tube | You Tube SEO</title>
+<meta name="title" content="Pen Tube | AI YouTube SEO & Script Generator">
+<meta name="description" content="Pen Tube is an all-in-one AI platform for YouTube creators. Generate video scripts, optimize SEO keywords, and grow your channel faster.">
+<meta name="keywords" content="YouTube SEO, AI Script Generator, YouTube Growth, Pen Tube, Keyword Research, Free AI Tools, Video Optimization">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Kanishka Net">
+
+<!-- Open Graph / Facebook / WhatsApp Share Preview Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kanishkanet.online/"> <!-- ඔබේ Live Web Link එක -->
+<meta property="og:title" content="Pen Tube | AI Creator OS">
+<meta property="og:description" content="Free AI tool for YouTube Creators to generate scripts, tags, and thumbnails.">
+<meta property="og:image" content="https://kanishkanet.online/logo.png"> <!-- Share කරද්දි පේන Image එක -->
+
+<!-- Twitter Preview Tags -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://kanishkanet.online/">
+<meta property="twitter:title" content="Pen Tube | AI Creator OS">
+<meta property="twitter:description" content="Free AI tool for YouTube Creators to generate scripts, tags, and thumbnails.">
+<meta property="twitter:image" content="https://kanishkanet.online/logo.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           1. BASE & CYBERPUNK DESIGN SYSTEM
+           ========================================================================== */
+        :root {
+            --bg-base: #050508;
+            --bg-surface: #0a0a12;
+            --bg-glass: rgba(15, 15, 25, 0.6);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            
+            --neon-cyan: #00f3ff;
+            --neon-magenta: #ff00e5;
+            --neon-purple: #8a2be2;
+            
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 243, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(255, 0, 229, 0.05) 0%, transparent 50%);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        /* ==========================================================================
+           2. LAYOUT & NAVIGATION
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-glass);
+            background: rgba(5, 5, 8, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .brand {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .brand i { color: var(--neon-cyan); }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .user-menu { display: flex; align-items: center; gap: 1rem; }
+        .user-avatar {
+            width: 35px; height: 35px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+            display: none; /* Shown when logged in */
+            align-items: center; justify-content: center;
+            font-weight: bold; cursor: pointer;
+        }
+        .mobile-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        .main-content {
+            margin-top: 70px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page { display: none; padding: 2rem 5%; animation: fadeIn 0.4s ease-out; }
+        .page.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ==========================================================================
+           3. PAGES & COMPONENTS
+           ========================================================================== */
+        
+        /* HOME PAGE */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 { font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1rem; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin-bottom: 2rem; }
+        .hero-actions { display: flex; gap: 1rem; }
+
+        .trust-section { padding: 4rem 0; text-align: center; }
+        .trust-section h3 { color: var(--text-muted); margin-bottom: 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; }
+        .badges { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .badge {
+            padding: 0.5rem 1rem; border-radius: 20px;
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass);
+            display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted);
+        }
+
+        /* APP DASHBOARD (WORKSPACE) */
+        .workspace { display: flex; gap: 2rem; min-height: 75vh; }
+        .tools-sidebar { width: 250px; display: flex; flex-direction: column; gap: 1rem; }
+        .tool-tab {
+            padding: 1rem; border-radius: 12px; cursor: pointer;
+            background: rgba(255,255,255,0.02); border: 1px solid transparent;
+            color: var(--text-muted); transition: var(--transition);
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .tool-tab:hover { background: rgba(255,255,255,0.05); }
+        .tool-tab.active {
+            background: rgba(0, 243, 255, 0.1); border-color: var(--neon-cyan);
+            color: var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+        }
+
+        .tool-content-area { flex: 1; }
+        .tool-view { display: none; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .tool-view.active { display: grid; }
+
+        .input-group { margin-bottom: 1.5rem; }
+        .input-group label { display: block; margin-bottom: 0.5rem; color: #cbd5e1; font-size: 0.9rem; }
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%; padding: 0.75rem 1rem;
+            background: rgba(0,0,0,0.3); border: 1px solid var(--border-glass);
+            border-radius: 8px; color: white; font-family: var(--font-body);
+            transition: var(--transition);
+        }
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+            outline: none; border-color: var(--neon-purple); box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+        }
+
+        .output-card {
+            padding: 2rem; height: 100%; display: flex; flex-direction: column;
+            position: relative; overflow: hidden;
+        }
+        .output-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .output-content {
+            flex: 1; background: rgba(0,0,0,0.4); border-radius: 8px;
+            padding: 1.5rem; white-space: pre-wrap; color: #e2e8f0;
+            overflow-y: auto; max-height: 500px; line-height: 1.6; font-size: 0.95rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .output-actions { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        
+        .preview-img { width: 100%; border-radius: 8px; margin-top: 1rem; display: none; border: 1px solid var(--neon-cyan); }
+
+        /* CREATOR VAULT */
+        .vault-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .vault-item { padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+        .vault-item h4 { color: var(--neon-cyan); margin-bottom: 0.5rem;}
+        .vault-item p { color: var(--text-muted); font-size: 0.85rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;}
+        .vault-meta { font-size: 0.8rem; color: #64748b; }
+        .vault-actions { display: flex; gap: 0.5rem; margin-top: auto; }
+        .btn-icon { background: rgba(255,255,255,0.1); border: none; color: white; padding: 0.5rem; border-radius: 6px; cursor: pointer; transition: 0.2s;}
+        .btn-icon:hover { background: rgba(255,255,255,0.2); }
+
+        /* TOAST */
+        #toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
+        .toast {
+            padding: 1rem 1.5rem; border-radius: 8px; color: white; font-weight: 500;
+            display: flex; align-items: center; gap: 0.75rem;
+            transform: translateX(120%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .toast.show { transform: translateX(0); }
+        .toast.success { background: rgba(16, 185, 129, 0.9); border: 1px solid #059669; }
+        .toast.error { background: rgba(239, 68, 68, 0.9); border: 1px solid #b91c1c; }
+        .toast.info { background: rgba(59, 130, 246, 0.9); border: 1px solid #2563eb; }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border-glass); padding: 3rem 5% 1rem; margin-top: auto;
+            background: rgba(5, 5, 8, 0.5);
+        }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;}
+        .footer-col h4 { margin-bottom: 1rem; color: white;}
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a { color: var(--text-muted); text-decoration: none; transition: 0.2s; }
+        .footer-col a:hover { color: var(--neon-cyan); }
+        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); }
+
+/* FOOTER */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08); 
+            padding: 3rem 5% 1rem; 
+            margin-top: auto;
+            background: rgba(5, 5, 8, 0.5);
+        }
+        .footer-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 2rem; 
+            margin-bottom: 2rem;
+        }
+        .footer-col h4 { margin-bottom: 1rem; color: white; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a { color: #94a3b8; text-decoration: none; transition: 0.2s; }
+        .footer-col a:hover { color: #00f0ff; }
+        .footer-bottom { 
+            text-align: center; 
+            color: #94a3b8; 
+            font-size: 0.9rem; 
+            padding-top: 2rem; 
+            border-top: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+
+        /* ==========================================================================
+           4. UIVERSE CUSTOM COMPONENTS (SCOPED & ADAPTED)
+           ========================================================================== */
+
+        /* A. Download Button Scoped */
+        .dl-wrapper .button {
+            --main-focus: #2d8cf0; --font-color: #dedede; --bg-color-sub: #222; --bg-color: #323232; --main-color: #dedede;
+            position: relative; width: 150px; height: 40px; cursor: pointer; display: flex; align-items: center;
+            border: 2px solid var(--main-color); box-shadow: 4px 4px var(--main-color); background-color: var(--bg-color);
+            border-radius: 10px; overflow: hidden;
+        }
+        .dl-wrapper .button, .dl-wrapper .button__icon, .dl-wrapper .button__text { transition: all 0.3s; }
+        .dl-wrapper .button .button__text { transform: translateX(21px); color: var(--font-color); font-weight: 600; font-family: var(--font-body); font-size:0.9rem;}
+        .dl-wrapper .button .button__icon { position: absolute; transform: translateX(109px); height: 100%; width: 39px; background-color: var(--bg-color-sub); display: flex; align-items: center; justify-content: center; }
+        .dl-wrapper .button .svg { width: 20px; fill: var(--main-color); }
+        .dl-wrapper .button:hover { background: var(--bg-color); }
+        .dl-wrapper .button:hover .button__text { color: transparent; }
+        .dl-wrapper .button:hover .button__icon { width: 148px; transform: translateX(0); }
+        .dl-wrapper .button:active { transform: translate(3px, 3px); box-shadow: 0px 0px var(--main-color); }
+
+        /* B. Generate Sparkle Button Scoped */
+        .gen-wrapper { display: inline-block; }
+        .gen-wrapper .button {
+            --black-700: hsla(0 0% 12% / 1); --border_radius: 9999px; --transtion: 0.3s ease-in-out; --offset: 2px;
+            cursor: pointer; position: relative; display: flex; align-items: center; gap: 0.5rem;
+            transform-origin: center; padding: 1rem 2rem; background-color: transparent; border: none;
+            border-radius: var(--border_radius); transform: scale(calc(1 + (var(--active, 0) * 0.1))); transition: transform var(--transtion);
+            font-family: var(--font-display);
+        }
+        .gen-wrapper .button::before {
+            content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;
+            background-color: var(--black-700); border-radius: var(--border_radius);
+            box-shadow: inset 0 0.5px hsl(0, 0%, 100%), inset 0 -1px 2px 0 hsl(0, 0%, 0%), 0px 4px 10px -4px hsla(0 0% 0% / calc(1 - var(--active, 0))), 0 0 0 calc(var(--active, 0) * 0.375rem) hsl(260 97% 50% / 0.75);
+            transition: all var(--transtion); z-index: 0;
+        }
+        .gen-wrapper .button::after {
+            content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;
+            background-color: hsla(260 97% 61% / 0.75);
+            background-image: radial-gradient(at 51% 89%, hsla(266, 45%, 74%, 1) 0px, transparent 50%), radial-gradient(at 100% 100%, hsla(266, 36%, 60%, 1) 0px, transparent 50%), radial-gradient(at 22% 91%, hsla(266, 36%, 60%, 1) 0px, transparent 50%);
+            background-position: top; opacity: var(--active, 0); border-radius: var(--border_radius); transition: opacity var(--transtion); z-index: 2;
+        }
+        .gen-wrapper .button:is(:hover, :focus-visible) { --active: 1; }
+        .gen-wrapper .button:active { transform: scale(1); }
+        .gen-wrapper .button .dots_border {
+            --size_border: calc(100% + 2px); overflow: hidden; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: var(--size_border); height: var(--size_border); background-color: transparent; border-radius: var(--border_radius); z-index: -10;
+        }
+        .gen-wrapper .button .dots_border::before {
+            content: ""; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); transform-origin: left; transform: rotate(0deg);
+            width: 100%; height: 2rem; background-color: white; mask: linear-gradient(transparent 0%, white 120%); -webkit-mask: linear-gradient(transparent 0%, white 120%); animation: rotate 2s linear infinite;
+        }
+        @keyframes rotate { to { transform: rotate(360deg); } }
+        .gen-wrapper .button .sparkle { position: relative; z-index: 10; width: 1.75rem; }
+        .gen-wrapper .button .sparkle .path { fill: currentColor; stroke: currentColor; transform-origin: center; color: hsl(0, 0%, 100%); }
+        .gen-wrapper .button:is(:hover, :focus) .sparkle .path { animation: path 1.5s linear 0.5s infinite; }
+        .gen-wrapper .button .sparkle .path:nth-child(1) { --scale_path_1: 1.2; }
+        .gen-wrapper .button .sparkle .path:nth-child(2) { --scale_path_2: 1.2; }
+        .gen-wrapper .button .sparkle .path:nth-child(3) { --scale_path_3: 1.2; }
+        @keyframes path { 0%, 34%, 71%, 100% { transform: scale(1); } 17% { transform: scale(var(--scale_path_1, 1)); } 49% { transform: scale(var(--scale_path_2, 1)); } 83% { transform: scale(var(--scale_path_3, 1)); } }
+        .gen-wrapper .button .text_button {
+            position: relative; z-index: 10; background-image: linear-gradient(90deg, hsla(0 0% 100% / 1) 0%, hsla(0 0% 100% / var(--active, 0)) 120%);
+            background-clip: text; -webkit-background-clip: text; font-size: 1rem; color: transparent; font-weight: 600;
+        }
+
+        /* C. Skeleton Loader (Translated from Tailwind to standard CSS) */
+        .skel-wrapper { display: none; } /* Hidden by default */
+        .skel-wrapper.active { display: block; }
+        .skel-container { position: relative; display: flex; width: 16rem; gap: 0.5rem; padding: 1rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+        .skel-avatar { height: 3rem; width: 3rem; border-radius: 9999px; background-color: #334155; }
+        .skel-content { flex: 1 1 0%; }
+        .skel-line-1 { margin-bottom: 0.25rem; height: 1.25rem; width: 60%; border-radius: 0.5rem; background-color: #334155; }
+        .skel-line-2 { height: 1.25rem; width: 90%; border-radius: 0.5rem; background-color: #334155; }
+        .skel-dot { position: absolute; bottom: 1.25rem; right: 0; height: 1rem; width: 1rem; border-radius: 9999px; background-color: #334155; }
+
+        /* D. Login / Register Form Scoped */
+        .auth-wrapper { display: flex; justify-content: center; align-items: center; min-height: 70vh; }
+        .auth-wrapper .form {
+            display: flex; flex-direction: column; gap: 10px; background-color: #0f0f15; padding: 40px; width: 450px; border-radius: 20px;
+            font-family: var(--font-body); border: 1px solid var(--border-glass); box-shadow: 0 0 40px rgba(0, 243, 255, 0.1);
+        }
+        .auth-wrapper ::placeholder { font-family: var(--font-body); color: #64748b; }
+        .auth-wrapper .form button { align-self: flex-end; }
+        .auth-wrapper .flex-column > label { color: #f1f5f9; font-weight: 600; margin-bottom: 4px; }
+        .auth-wrapper .inputForm {
+            border: 1.5px solid #334155; border-radius: 10px; height: 50px; display: flex; align-items: center; padding-left: 10px; transition: 0.2s ease-in-out; background: rgba(0,0,0,0.5);
+        }
+        .auth-wrapper .inputForm svg { fill: #94a3b8; }
+        .auth-wrapper .input { margin-left: 10px; border-radius: 10px; border: none; width: 85%; height: 100%; background: transparent; color: white;}
+        .auth-wrapper .input:focus { outline: none; }
+        .auth-wrapper .inputForm:focus-within { border: 1.5px solid var(--neon-cyan); }
+        .auth-wrapper .flex-row { display: flex; flex-direction: row; align-items: center; gap: 10px; justify-content: space-between; }
+        .auth-wrapper .flex-row > div { display: flex; align-items: center; gap: 5px;}
+        .auth-wrapper .flex-row > div > label { font-size: 14px; color: #cbd5e1; font-weight: 400; }
+        .auth-wrapper .span { font-size: 14px; margin-left: 5px; color: var(--neon-cyan); font-weight: 500; cursor: pointer; }
+        .auth-wrapper .button-submit {
+            margin: 20px 0 10px 0; background-color: var(--neon-purple); border: none; color: white; font-size: 15px; font-weight: 600; border-radius: 10px; height: 50px; width: 100%; cursor: pointer; transition: 0.2s;
+        }
+        .auth-wrapper .button-submit:hover { background-color: #7928ca; box-shadow: 0 0 15px rgba(138, 43, 226, 0.4); }
+        .auth-wrapper .p { text-align: center; color: #94a3b8; font-size: 14px; margin: 5px 0; }
+        .auth-wrapper .btn {
+            margin-top: 10px; width: 100%; height: 50px; border-radius: 10px; display: flex; justify-content: center; align-items: center;
+            font-weight: 500; gap: 10px; border: 1px solid #334155; background-color: rgba(255,255,255,0.05); color: white; cursor: pointer; transition: 0.2s ease-in-out;
+        }
+        .auth-wrapper .btn:hover { border: 1px solid var(--neon-cyan); background: rgba(0, 243, 255, 0.05); }
+
+        /* E. File Upload Dropzone Scoped */
+        .upload-wrapper .custum-file-upload {
+            height: 150px; width: 100%; display: flex; flex-direction: column; align-items: space-between; gap: 20px; cursor: pointer;
+            align-items: center; justify-content: center; border: 2px dashed #334155; background-color: rgba(0,0,0,0.3);
+            padding: 1.5rem; border-radius: 10px; transition: 0.2s;
+        }
+        .upload-wrapper .custum-file-upload:hover { border-color: var(--neon-cyan); background-color: rgba(0,243,255,0.02);}
+        .upload-wrapper .custum-file-upload .icon { display: flex; align-items: center; justify-content: center; }
+        .upload-wrapper .custum-file-upload .icon svg { height: 40px; fill: #94a3b8; }
+        .upload-wrapper .custum-file-upload .text { display: flex; align-items: center; justify-content: center; }
+        .upload-wrapper .custum-file-upload .text span { font-weight: 400; color: #94a3b8; }
+        .upload-wrapper .custum-file-upload input { display: none; }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 900px) {
+            .workspace { flex-direction: column; }
+            .tools-sidebar { width: 100%; flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
+            .tool-tab { flex: 0 0 auto; }
+            .tool-view { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: var(--bg-surface); flex-direction: column; padding: 2rem; border-bottom: 1px solid var(--border-glass); }
+            .nav-links.active { display: flex; }
+            .mobile-toggle { display: block; }
+            .auth-wrapper .form { width: 100%; padding: 20px;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="brand" onclick="navigateTo('home')">
+            <i class="fa-solid fa-pen-nib"></i>
+            <span>Pen Tube</span>
+        </div>
+        <button class="mobile-toggle" id="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="nav-links">
+            <a onclick="navigateTo('home')" id="nav-home" class="active">Home</a>
+            <a onclick="navigateTo('app')" id="nav-app">AI Engine</a>
+            <a onclick="navigateTo('dashboard')" id="nav-dashboard">Creator Vault</a>
+            <a onclick="navigateTo('privacy')" id="nav-privacy">Privacy</a>
+            <a onclick="navigateTo('admin')" id="nav-admin" style="display:none; color:var(--neon-magenta);">Admin</a>
+        </div>
+        <div class="user-menu">
+            <a onclick="navigateTo('auth')" id="login-btn" style="color: var(--neon-cyan); cursor: pointer; font-weight:600;">Sign In</a>
+            <div class="user-avatar" id="user-avatar" onclick="authModule.logout()" title="Click to Logout"></div>
+        </div>
+    </nav>
+
+    <!-- TOAST NOTIFICATIONS -->
+    <div id="toast-container"></div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+
+<!-- PAGE 1: HOME -->
+<section id="page-home" class="page active relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- වම් පැත්ත: Text & Sparkle Button -->
+        <div class="text-left z-10">
+            <div class="inline-flex items-center gap-2 py-1 px-3.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-semibold text-xs tracking-widest uppercase mb-6">
+                <i class="fa-solid fa-bolt"></i> 100% Free            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                Get More Views & <br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-fuchsia-500">
+                    Subscribers on YouTube
+                </span>
+            </h1>
+            
+            <p class="text-slate-400 text-base sm:text-lg mb-8 max-w-lg leading-relaxed">
+                Optimize your content, gain visibility, and grow faster on YouTube. Pen Tube is an all-in-one optimization platform with powerful YouTube SEO, keyword discovery, and AI tools.
+            </p>
+            
+            <!-- ඔබගේ Sparkle Button Style එක සහිත Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 mb-10">
+                <!-- Sparkle Button (Get Started Free) -->
+                <div class="gen-wrapper cursor-pointer" onclick="navigateTo('app')">
+                    <button class="button">
+                        <div class="dots_border"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle"><path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z"></path><path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z"></path><path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"></path></svg>
+                        <span class="text_button">Get Started FREE</span>
+                    </button>
+                </div>
+
+                <!-- Secondary Button -->
+                <button onclick="navigateTo('app')" class="border border-white/10 hover:border-cyan-400/50 hover:bg-white/5 text-white font-medium py-3 px-6 rounded-xl transition-all backdrop-blur-sm">
+                    Explore Features
+                </button>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="border-t border-white/10 pt-6">
+                <h4 class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Built for Modern Creators</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300"><i class="fa-solid fa-gamepad text-cyan-400 mr-1.5"></i> Gaming</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300"><i class="fa-solid fa-microchip text-fuchsia-400 mr-1.5"></i> Tech</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300"><i class="fa-solid fa-graduation-cap text-cyan-400 mr-1.5"></i> Education</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300"><i class="fa-solid fa-mobile-screen text-fuchsia-400 mr-1.5"></i> Shorts</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- දකුණු පැත්ත: TubeBuddy-Style Image Collage Grid -->
+        <div class="relative w-full h-[400px] sm:h-[480px] lg:h-[520px] flex items-center justify-center">
+            
+            <div class="absolute w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute w-72 h-72 bg-fuchsia-500/20 rounded-full blur-3xl -z-10 translate-x-12 translate-y-12"></div>
+
+            <div class="absolute top-4 left-2 sm:left-8 w-32 h-44 sm:w-40 sm:h-52 bg-[#0c0c14] rounded-2xl border border-white/10 overflow-hidden shadow-2xl -rotate-6 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-30">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format=crop" alt="Creator 1" class="w-full h-full object-cover opacity-80">
+            </div>
+
+            <div class="absolute top-0 right-2 sm:right-6 w-28 h-40 sm:w-36 sm:h-48 bg-[#0c0c14] rounded-2xl border border-white/10 overflow-hidden shadow-2xl rotate-6 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-30">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=400&auto=format&fit=crop" alt="Creator 2" class="w-full h-full object-cover opacity-80">
+            </div>
+
+            <div class="absolute bottom-6 left-0 sm:left-4 w-36 h-28 sm:w-44 sm:h-32 bg-[#0c0c14] rounded-2xl border border-white/10 overflow-hidden shadow-2xl rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-30">
+                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=400&auto=format&fit=crop" alt="Creator 3" class="w-full h-full object-cover opacity-80">
+            </div>
+
+            <div class="absolute bottom-2 right-4 sm:right-8 w-32 h-44 sm:w-40 sm:h-52 bg-[#0c0c14] rounded-2xl border border-white/10 overflow-hidden shadow-2xl -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-30">
+                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop" alt="Creator 4" class="w-full h-full object-cover opacity-80">
+            </div>
+
+    <!-- Center Pen Tube Logo -->
+<div class="relative z-20 w-24 h-24 sm:w-28 sm:h-28 bg-[#050508] border-2 border-cyan-400 rounded-2xl flex items-center justify-center shadow-[0_0_35px_rgba(0,240,255,0.4)] transition-all hover:scale-110">
+    <i class="fa-solid fa-pen-nib text-3xl sm:text-4xl text-cyan-400"></i>
+</div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- PAGE 2: AI APP ENGINE -->
+        <section id="page-app" class="page">
+            <h2 style="margin-bottom: 2rem;">Workspace Engine <span class="gradient-text">AI</span></h2>
+            
+            <div class="workspace">
+                <!-- SIDEBAR TABS -->
+                <div class="tools-sidebar">
+                    <div class="tool-tab active" onclick="appModule.switchTab('thumb')">
+                        <i class="fa-regular fa-image"></i> Thumbnail Prompt
+                    </div>
+                    <div class="tool-tab" onclick="appModule.switchTab('seo')">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i> SEO & Keywords
+                    </div>
+                    <div class="tool-tab" onclick="appModule.switchTab('script')">
+                        <i class="fa-solid fa-scroll"></i> Script Outline
+                    </div>
+                </div>
+
+                <!-- CONTENT AREA -->
+                <div class="tool-content-area glass-panel">
+                    
+                    <!-- TAB 1: THUMBNAIL -->
+                    <div id="tab-thumb" class="tool-view active" style="padding: 2rem;">
+                        <div class="input-side">
+                            <h3 style="margin-bottom: 1.5rem; color: var(--neon-cyan);">Visual Architect</h3>
+<div class="flex items-center justify-between mb-6 border-b border-white/10 pb-3">
+    <div class="flex items-center gap-2.5">
+        <i class="fa-solid fa-sparkles text-cyan-400 text-lg animate-pulse"></i>
+        <h3 class="text-xl sm:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-cyan-400 to-fuchsia-400 tracking-wide">
+            GPT Astra Live
+        </h3>
+    </div>
+    
+    <!-- Live & Pro Status Badge -->
+    <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold text-[10px] tracking-widest uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            LIVE
+        </span>
+        <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/40 text-yellow-300 font-extrabold text-[10px] tracking-widest uppercase shadow-[0_0_10px_rgba(234,179,8,0.2)]">
+            PRO
+        </span>
+    </div>
+</div>
+                            <div class="input-group">
+                                <label>Video Topic / Main Subject</label>
+                                <input type="text" id="t-topic" placeholder="e.g. Building a custom PC in 2026">
+                            </div>
+                            <div class="input-group">
+                                <label>Visual Style & Mood</label>
+                                <select id="t-style">
+                                    <option>Cyberpunk / Neon</option>
+                                    <option>Minimalist & Clean</option>
+                                    <option>Epic Cinematic</option>
+                                    <option>Vibrant YouTube Gaming</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Reference Image (Optional)</label>
+                                <div class="upload-wrapper">
+                                    <!-- UIVERSE FILE UPLOAD -->
+                                    <label for="file" class="custum-file-upload">
+                                        <div class="icon">
+                                            <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" fill=""></path> </g></svg>
+                                        </div>
+                                        <div class="text"><span>Click to upload image</span></div>
+                                        <input id="file" type="file" accept="image/png, image/jpeg, image/webp">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="gen-wrapper" onclick="appModule.generate('thumb')">
+                                <button class="button"><div class="dots_border"></div><span class="text_button">Generate Prompt</span></button>
+                            </div>
+                        </div>
+
+                        <div class="output-side">
+                            <div class="output-card glass-panel">
+                                <div class="output-header">
+                                    <h4>Output Window</h4>
+                                    <button class="btn-icon" onclick="appModule.copyOutput('out-thumb')" title="Copy"><i class="fa-regular fa-copy"></i></button>
+                                </div>
+                                
+                                <!-- SKELETON LOADER UIVERSE -->
+                                <div id="skel-thumb" class="skel-wrapper">
+                                    <div class="skel-container">
+                                      <div class="skel-avatar"></div>
+                                      <div class="skel-content">
+                                        <div class="skel-line-1"></div>
+                                        <div class="skel-line-2"></div>
+                                      </div>
+                                      <div class="skel-dot"></div>
+                                    </div>
+                                    <p style="color:var(--text-muted); font-size:0.8rem; margin-top:10px; text-align:center;">AI is thinking...</p>
+                                </div>
+
+                                <div class="output-content" id="out-thumb">Awaiting inputs...</div>
+                                <img id="preview-thumb" class="preview-img" alt="AI Generated Preview" src="">
+                                
+                                <div class="output-actions">
+                                    <div class="dl-wrapper" onclick="appModule.download('thumb', 'txt')">
+                                        <!-- UIVERSE DOWNLOAD BUTTON -->
+                                        <button type="button" class="button">
+                                          <span class="button__text">Download</span>
+                                          <span class="button__icon"><svg class="svg" data-name="Layer 2" id="bdd05811-e15d-428c-bb53-8661459f9307" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
+                                        </button>
+                                    </div>
+                                    <button class="btn-icon" style="padding:0 1rem; border:1px solid var(--border-glass);" onclick="appModule.generatePreview()">Generate AI Preview</button>
+                                    <button class="btn-icon" style="padding:0 1rem; border:1px solid var(--border-glass);" onclick="appModule.saveToVault('thumb')"><i class="fa-solid fa-vault"></i> Save to Vault</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: SEO -->
+                    <div id="tab-seo" class="tool-view" style="padding: 2rem;">
+                        <div class="input-side">
+                            <h3 style="margin-bottom: 1.5rem; color: #ffeb3b;">SEO Optimizer</h3>
+
+
+
+<div class="flex items-center justify-between mb-6 border-b border-white/10 pb-3">
+    <div class="flex items-center gap-2.5">
+        <i class="fa-solid fa-sparkles text-cyan-400 text-lg animate-pulse"></i>
+        <h3 class="text-xl sm:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-cyan-400 to-fuchsia-400 tracking-wide">
+            GPT Astra Live
+        </h3>
+    </div>
+    
+    <!-- Live & Pro Status Badge -->
+    <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold text-[10px] tracking-widest uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            LIVE
+        </span>
+        <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/40 text-yellow-300 font-extrabold text-[10px] tracking-widest uppercase shadow-[0_0_10px_rgba(234,179,8,0.2)]">
+            PRO
+        </span>
+    </div>
+</div>
+
+
+
+
+
+                            <div class="input-group">
+                                <label>Main Keyword</label>
+                                <input type="text" id="s-keyword" placeholder="e.g. Best budget microphone">
+                            </div>
+                            <div class="input-group">
+                                <label>Target Audience</label>
+                                <input type="text" id="s-audience" placeholder="e.g. Beginner streamers">
+                            </div>
+                            <div class="gen-wrapper" onclick="appModule.generate('seo')">
+                                <button class="button"><div class="dots_border"></div><span class="text_button">Build SEO Profile</span></button>
+                            </div>
+                        </div>
+                        <div class="output-side">
+                            <div class="output-card glass-panel">
+                                <div class="output-header">
+                                    <h4>Metadata Output</h4>
+                                    <button class="btn-icon" onclick="appModule.copyOutput('out-seo')"><i class="fa-regular fa-copy"></i></button>
+                                </div>
+                                <div id="skel-seo" class="skel-wrapper">
+                                    <div class="skel-container"><div class="skel-avatar"></div><div class="skel-content"><div class="skel-line-1"></div><div class="skel-line-2"></div></div></div>
+                                </div>
+                                <div class="output-content" id="out-seo">Awaiting inputs...</div>
+                                <div class="output-actions">
+                                    <div class="dl-wrapper" onclick="appModule.download('seo', 'json')">
+                                        <button type="button" class="button"><span class="button__text">Download JSON</span><span class="button__icon"><i class="fa-solid fa-download" style="color:black;"></i></span></button>
+                                    </div>
+                                    <button class="btn-icon" style="padding:0 1rem; border:1px solid var(--border-glass);" onclick="appModule.saveToVault('seo')"><i class="fa-solid fa-vault"></i> Save to Vault</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: SCRIPT -->
+                    <div id="tab-script" class="tool-view" style="padding: 2rem;">
+                        <div class="input-side">
+                            <h3 style="margin-bottom: 1.5rem; color: #ff00e5;">Script Architect</h3>
+                            <div class="input-group">
+                                <label>Video Topic</label>
+                                <input type="text" id="sc-topic" placeholder="e.g. Why AI won't replace programmers">
+                            </div>
+                            <div class="input-group">
+                                <label>Tone</label>
+                                <select id="sc-tone">
+                                    <option>Educational & Professional</option>
+                                    <option>Entertaining & Fast-paced</option>
+                                    <option>Documentary / Serious</option>
+                                </select>
+                            </div>
+                            <div class="gen-wrapper" onclick="appModule.generate('script')">
+                                <button class="button"><div class="dots_border"></div><span class="text_button">Outline Script</span></button>
+                            </div>
+                        </div>
+                        <div class="output-side">
+                            <div class="output-card glass-panel">
+                                <div class="output-header">
+                                    <h4>Structure Output</h4>
+                                    <button class="btn-icon" onclick="appModule.copyOutput('out-script')"><i class="fa-regular fa-copy"></i></button>
+                                </div>
+                                <div id="skel-script" class="skel-wrapper">
+                                    <div class="skel-container"><div class="skel-avatar"></div><div class="skel-content"><div class="skel-line-1"></div><div class="skel-line-2"></div></div></div>
+                                </div>
+                                <div class="output-content" id="out-script">Awaiting inputs...</div>
+                                <div class="output-actions">
+                                    <div class="dl-wrapper" onclick="appModule.download('script', 'txt')">
+                                        <button type="button" class="button"><span class="button__text">Download TXT</span><span class="button__icon"><i class="fa-solid fa-download" style="color:black;"></i></span></button>
+                                    </div>
+                                    <button class="btn-icon" style="padding:0 1rem; border:1px solid var(--border-glass);" onclick="appModule.saveToVault('script')"><i class="fa-solid fa-vault"></i> Save to Vault</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: CREATOR VAULT -->
+        <section id="page-dashboard" class="page">
+            <h2>Creator <span style="color: var(--neon-cyan);">Vault</span></h2>
+            <p style="color:var(--text-muted); margin-top:0.5rem;">Your secure, cloud-synced generation history.</p>
+            
+            <div class="vault-grid" id="vault-container">
+                <!-- Injected via JS -->
+                <p style="color:var(--text-muted); grid-column: 1/-1;">Loading your vault...</p>
+            </div>
+        </section>
+
+        <!-- PAGE 4: AUTHENTICATION -->
+        <section id="page-auth" class="page">
+            <div class="auth-wrapper">
+                <!-- UIVERSE LOGIN FORM -->
+                <form class="form" id="auth-form" onsubmit="event.preventDefault(); authModule.handleEmailAuth();">
+                    <div style="text-align: center; margin-bottom:1rem;">
+                        <i class="fa-solid fa-pen-nib" style="font-size: 2rem; color: var(--neon-cyan);"></i>
+                        <h3 style="margin-top:0.5rem; color: white;">Welcome to Pen Tube</h3>
+                    </div>
+
+                    <div class="flex-column"><label>Email</label></div>
+                    <div class="inputForm">
+                      <svg height="20" viewBox="0 0 32 32" width="20" xmlns="http://www.w3.org/2000/svg"><g id="Layer_3" data-name="Layer 3"><path d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"></path></g></svg>
+                      <input type="email" id="auth-email" class="input" placeholder="Enter your Email" required>
+                    </div>
+                  
+                    <div class="flex-column"><label>Password</label></div>
+                    <div class="inputForm">
+                      <svg height="20" viewBox="-64 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path><path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path></svg>        
+                      <input type="password" id="auth-pwd" class="input" placeholder="Enter your Password" required>
+                    </div>
+                  
+                    <div class="flex-row">
+                      <div><input type="checkbox"><label>Remember me</label></div>
+                      <span class="span">Forgot password?</span>
+                    </div>
+                    
+                    <button class="button-submit" type="submit" id="auth-submit-btn">Sign In / Register</button>
+                    <p class="p line">Or With</p>
+              
+                    <div class="flex-row">
+                        <button type="button" class="btn google" onclick="authModule.signInGoogle()">
+                            <svg version="1.1" width="20" viewBox="0 0 512 512"><path fill="#FBBB00" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456C103.821,274.792,107.225,292.797,113.47,309.408z"></path><path fill="#518EF8" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"></path><path fill="#28B446" d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"></path><path fill="#F14336" d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0C318.115,0,375.068,22.126,419.404,58.936z"></path></svg>
+                            Google 
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- PAGE 5: PRIVACY -->
+        <section id="page-privacy" class="page">
+            <div class="glass-panel" style="padding:3rem; max-width:800px; margin: 0 auto;">
+                <h2 style="margin-bottom: 1rem;">Privacy & <span style="color:var(--neon-magenta);">Data Protection</span></h2>
+                <div style="color: var(--text-muted); line-height: 1.8;">
+                    <p>At Pen Tube, we use reasonable technical and organizational safeguards to protect user data. Your trust is our priority.</p>
+                    <h4 style="color:white; margin-top:1.5rem;">1. Data Collection</h4>
+                    <p>We only collect the data necessary to provide your Creator Vault. This includes your email for authentication and the prompts/scripts you explicitly choose to save.</p>
+                    <h4 style="color:white; margin-top:1.5rem;">2. AI Processing</h4>
+                    <p>Generations are processed via secure endpoints to AI providers (like Google Gemini). We do not use your personal vault data to train our own models.</p>
+                    <h4 style="color:white; margin-top:1.5rem;">3. Security Architecture</h4>
+                    <p>Authentication and Vault storage are secured via Firebase v10 with strict Firestore Security Rules, ensuring users can only read/write their own content.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 6: ADMIN -->
+        <section id="page-admin" class="page">
+            <div class="glass-panel" style="padding:2rem; max-width: 1000px; margin: 0 auto; border-color: var(--neon-magenta);">
+                <h2 style="color: var(--neon-magenta); margin-bottom:1rem;"><i class="fa-solid fa-shield-halved"></i> Admin Console</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Authorized access only. Welcome, Amila Kanishka.</p>
+                
+                <div class="vault-grid">
+                    <div class="glass-panel" style="padding:1.5rem; text-align:center;">
+                        <h3 style="font-size:2.5rem; color:var(--neon-cyan);">1,204</h3>
+                        <p style="color:var(--text-muted);">Total Users</p>
+                    </div>
+                    <div class="glass-panel" style="padding:1.5rem; text-align:center;">
+                        <h3 style="font-size:2.5rem; color:#ffeb3b;">8,492</h3>
+                        <p style="color:var(--text-muted);">Total Generations</p>
+                    </div>
+                    <div class="glass-panel" style="padding:1.5rem; text-align:center;">
+                        <h3 style="font-size:2.5rem; color:#00e676;">99.9%</h3>
+                        <p style="color:var(--text-muted);">API Uptime</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+     <footer class="mt-auto border-t border-white/10 bg-[#020204] relative z-20 w-full pt-16 pb-8 px-6 md:px-12">
+        <!-- SVG Graphic -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-full">
+            <svg class="relative block w-full h-[30px] md:h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#020204"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div>
+                <h3 class="font-bold tracking-widest text-lg uppercase bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-magenta mb-4">PEN TUBE</h3>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand-cyan': '#00f0ff',
+          'brand-magenta': '#ff00e5',
+        }
+      }
+    }
+  }
+</script>
+                <p class="text-white/50 text-sm mb-6 max-w-xs">The ultimate free-to-use AI Creator OS. Supercharge your YouTube workflow securely.</p>
+                <div class="flex gap-4 text-white/40">
+                    <i class="ph-fill ph-facebook-logo text-xl hover:text-brand-cyan cursor-pointer transition"></i>
+                    <i class="ph-fill ph-youtube-logo text-xl hover:text-brand-magenta cursor-pointer transition"></i>
+                    <i class="ph-fill ph-github-logo text-xl hover:text-white cursor-pointer transition"></i>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold text-white/80 mb-4">Tools & Links</h4>
+                <ul class="space-y-2 text-sm text-white/50">
+                    <li><a href="#" onclick="navigate('app')" class="hover:text-brand-cyan transition">Thumbnail Prompter</a></li>
+                    <li><a href="#" onclick="navigate('app')" class="hover:text-brand-cyan transition">SEO Strategy Builder</a></li>
+                    <li><a href="#" onclick="navigate('app')" class="hover:text-brand-cyan transition">Script Generator</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold text-white/80 mb-4">Free Tier Notice</h4>
+                <p class="text-xs text-white/40 leading-relaxed bg-white/5 p-4 rounded-xl border border-white/10">
+                    Pen Tube utilizes free-tier APIs (Gemini 1.5, Pollinations). Usage limits and quotas may apply. Do not input highly sensitive personal data into the AI engine.
+                </p>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-white/30">
+            <p>&copy; 2026 Pen Tube AI. All rights reserved.</p>
+            <p>Administered by Amila Kanishka.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDKs (v10 modular via CDN) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } 
+            from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getFirestore, collection, addDoc, query, where, getDocs, deleteDoc, doc, serverTimestamp, orderBy } 
+            from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        /* ==========================================================================
+           1. CONFIGURATION & STATE
+           ========================================================================== */
+        // USER MUST REPLACE THESE VALUES (Documented in README)
+        const firebaseConfig = {
+            apiKey: "YOUR_FIREBASE_API_KEY",
+            authDomain: "YOUR_PROJECT.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        
+        // ADMIN AUTHORIZATION (Frontend toggle only. Backend must use custom claims).
+        const ADMIN_UID = "REPLACE_WITH_REAL_ADMIN_UID"; 
+
+        // Initialize Firebase (wrapped in try-catch for local demo gracefully)
+        let app, auth, db;
+        let isDemoMode = false;
+        try {
+            app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+            if(firebaseConfig.apiKey === "YOUR_FIREBASE_API_KEY") throw new Error("Unconfigured");
+        } catch (e) {
+            console.warn("Firebase not configured. Running in Demo Mode.");
+            isDemoMode = true;
+        }
+
+        let currentUser = null;
+
+        /* ==========================================================================
+           2. UI UTILITIES
+           ========================================================================== */
+        window.showToast = (msg, type = 'info') => {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `<i class="fa-solid ${type === 'success' ? 'fa-check' : type === 'error' ? 'fa-triangle-exclamation' : 'fa-circle-info'}"></i> ${msg}`;
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 10);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        };
+
+        window.navigateTo = (pageId) => {
+            // Protected routes
+            if ((pageId === 'dashboard' || pageId === 'admin') && !currentUser && !isDemoMode) {
+                showToast("Please sign in first.", "error");
+                navigateTo('auth');
+                return;
+            }
+            
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            
+            document.getElementById(`page-${pageId}`).classList.add('active');
+            const navLink = document.getElementById(`nav-${pageId}`);
+            if(navLink) navLink.classList.add('active');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+
+        // Mobile Nav Toggle
+        document.getElementById('mobile-toggle').addEventListener('click', () => {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+
+        /* ==========================================================================
+           3. AUTHENTICATION MODULE
+           ========================================================================== */
+        window.authModule = {
+            init: () => {
+                if(isDemoMode) return;
+                onAuthStateChanged(auth, (user) => {
+                    currentUser = user;
+                    const loginBtn = document.getElementById('login-btn');
+                    const avatar = document.getElementById('user-avatar');
+                    const adminNav = document.getElementById('nav-admin');
+
+                    if (user) {
+                        loginBtn.style.display = 'none';
+                        avatar.style.display = 'flex';
+                        avatar.innerText = user.email.charAt(0).toUpperCase();
+                        if (user.uid === ADMIN_UID) adminNav.style.display = 'block';
+                        appModule.loadVault();
+                        if(document.getElementById('page-auth').classList.contains('active')) navigateTo('home');
+                    } else {
+                        loginBtn.style.display = 'block';
+                        avatar.style.display = 'none';
+                        adminNav.style.display = 'none';
+                    }
+                });
+            },
+            handleEmailAuth: async () => {
+                if(isDemoMode) return showToast("Demo mode: Auth disabled.", "info");
+                const email = document.getElementById('auth-email').value;
+                const pwd = document.getElementById('auth-pwd').value;
+                const btn = document.getElementById('auth-submit-btn');
+                btn.innerText = "Processing...";
+                
+                try {
+                    await signInWithEmailAndPassword(auth, email, pwd);
+                    showToast("Successfully logged in.", "success");
+                } catch (error) {
+                    if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
+                        try {
+                            await createUserWithEmailAndPassword(auth, email, pwd);
+                            showToast("Account created successfully.", "success");
+                        } catch (regError) {
+                            showToast(regError.message, "error");
+                        }
+                    } else {
+                        showToast(error.message, "error");
+                    }
+                }
+                btn.innerText = "Sign In / Register";
+            },
+            signInGoogle: async () => {
+                if(isDemoMode) return showToast("Demo mode: Auth disabled.", "info");
+                try {
+                    const provider = new GoogleAuthProvider();
+                    await signInWithPopup(auth, provider);
+                    showToast("Logged in with Google.", "success");
+                } catch (error) {
+                    showToast(error.message, "error");
+                }
+            },
+            logout: async () => {
+                if(isDemoMode) return;
+                await signOut(auth);
+                showToast("Logged out successfully.", "info");
+                navigateTo('home');
+            }
+        };
+
+        /* ==========================================================================
+           4. API & APP MODULE (MOCK SECURE LAYER)
+           ========================================================================== */
+        // In a real environment, this calls a Cloud Function. Here we simulate the AI logic securely.
+        let currentGenerations = { thumb: null, seo: null, script: null };
+
+        window.appModule = {
+            switchTab: (tabId) => {
+                document.querySelectorAll('.tool-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tool-view').forEach(v => v.classList.remove('active'));
+                
+                event.currentTarget.classList.add('active');
+                document.getElementById(`tab-${tabId}`).classList.add('active');
+            },
+
+            generate: async (type) => {
+                const skel = document.getElementById(`skel-${type}`);
+                const outBox = document.getElementById(`out-${type}`);
+                const previewImg = document.getElementById(`preview-thumb`);
+                
+                outBox.style.display = 'none';
+                if(previewImg) previewImg.style.display = 'none';
+                skel.classList.add('active');
+
+                // Simulate API Latency (Cloud Function call)
+                await new Promise(r => setTimeout(r, 2000));
+
+                let resultText = "";
+                if (type === 'thumb') {
+                    const topic = document.getElementById('t-topic').value || 'A creative concept';
+                    const style = document.getElementById('t-style').value;
+                    resultText = `MASTER THUMBNAIL PROMPT\n\nSubject: ${topic}\nStyle:${style}\nComposition: Rule of thirds, dynamic angle\nLighting: Neon rim light, cinematic contrast\nColor Grading: Cyan and magenta accents, deep shadows\nEmotion: Shock/Awe, highly expressive face\nVisual Hierarchy: Subject > Glowing object > Background\nAspect Ratio: 16:9\nNegative Prompt: text, blurry, watermark`;
+                    currentGenerations.thumb = resultText;
+                } 
+                else if (type === 'seo') {
+                    const kw = document.getElementById('s-keyword').value || 'content creation';
+                    resultText = `TITLE IDEAS:\n1. The Ultimate Guide to ${kw} in 2026\n2. I Tested the Best ${kw} (Shocking Results)\n3. Stop Doing ${kw} Wrong.\n\nTAGS:\n#${kw.replace(/\s+/g,'')} #YouTubeTips #CreatorEconomy #TechReview\n\nDESCRIPTION OUTLINE:\n- Hook paragraph targeting "${kw}"\n- Timestamps for easy navigation\n- Link to resources/vault\n- Social media handles`;
+                    currentGenerations.seo = resultText;
+                }
+                else if (type === 'script') {
+                    const topic = document.getElementById('sc-topic').value || 'Video subject';
+                    resultText = `SCRIPT OUTLINE: ${topic}\n\n[HOOK 0:00-0:15]\nStart with a bold claim about${topic}. "What if I told you..."\n\n[INTRO 0:15-1:00]\nEstablish credibility. Explain exactly what the viewer will learn today and why it will save them time.\n\n[MAIN BODY 1:00-6:00]\n- Point 1: The Core Problem\n- Point 2: The standard (but flawed) solution\n- Point 3: Your unique approach/framework\n\n[OUTRO 6:00-6:30]\nSummarize main takeaway. Call to Action: "Click the video on screen to see the advanced guide."`;
+                    currentGenerations.script = resultText;
+                }
+
+                skel.classList.remove('active');
+                outBox.style.display = 'block';
+                outBox.innerText = resultText;
+                showToast("Generation complete.", "success");
+            },
+
+            generatePreview: () => {
+                if(!currentGenerations.thumb) return showToast("Generate a prompt first.", "error");
+                const previewImg = document.getElementById(`preview-thumb`);
+                showToast("Requesting free AI preview via Pollinations...", "info");
+                
+                // Pollinations.ai requires no API key (100% Free)
+                const prompt = currentGenerations.thumb;
+                const url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1280&height=720&nologo=true`;
+                
+                previewImg.onload = () => { previewImg.style.display = 'block'; showToast("Preview ready.", "success"); };
+                previewImg.onerror = () => showToast("Preview generation temporarily unavailable.", "error");
+                previewImg.src = url;
+            },
+
+            copyOutput: (elId) => {
+                const text = document.getElementById(elId).innerText;
+                if(text === 'Awaiting inputs...') return;
+                navigator.clipboard.writeText(text).then(() => showToast("Copied to clipboard.", "success"))
+                                                   .catch(() => showToast("Unable to copy.", "error"));
+            },
+
+            download: (type, ext) => {
+                const content = currentGenerations[type];
+                if(!content) return showToast("Nothing to download.", "error");
+                
+                const blob = new Blob([content], { type: ext === 'json' ? 'application/json' : 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `PenTube_${type}_Generation.${ext}`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            },
+
+            saveToVault: async (type) => {
+                if(isDemoMode || !currentUser) {
+                    return showToast(isDemoMode ? "Vault disabled in Demo Mode." : "Please sign in to save.", "error");
+                }
+                const content = currentGenerations[type];
+                if(!content) return showToast("Nothing to save.", "error");
+
+                try {
+                    await addDoc(collection(db, "users", currentUser.uid, "creator_vault"), {
+                        type: type,
+                        content: content,
+                        createdAt: serverTimestamp()
+                    });
+                    showToast("Saved to Creator Vault.", "success");
+                    appModule.loadVault(); // Refresh vault UI
+                } catch(e) {
+                    showToast("Error saving to vault.", "error");
+                    console.error(e);
+                }
+            },
+
+            loadVault: async () => {
+                if(!currentUser || isDemoMode) return;
+                const container = document.getElementById('vault-container');
+                container.innerHTML = '<p style="color:var(--text-muted); grid-column: 1/-1;">Loading...</p>';
+
+                try {
+                    const q = query(collection(db, "users", currentUser.uid, "creator_vault"), orderBy("createdAt", "desc"));
+                    const snap = await getDocs(q);
+                    
+                    if(snap.empty) {
+                        container.innerHTML = '<p style="color:var(--text-muted); grid-column: 1/-1;">Your vault is empty.</p>';
+                        return;
+                    }
+
+                    container.innerHTML = '';
+                    snap.forEach(docSnap => {
+                        const data = docSnap.data();
+                        const id = docSnap.id;
+                        const titleMap = { thumb: "Thumbnail Prompt", seo: "SEO Metadata", script: "Script Outline" };
+                        
+                        const div = document.createElement('div');
+                        div.className = 'vault-item glass-panel';
+                        div.innerHTML = `
+                            <h4>${titleMap[data.type]}</h4>
+                            <p>${data.content}</p>
+                            <div class="vault-actions">
+                                <button class="btn-icon" onclick="appModule.deleteVaultItem('${id}')"><i class="fa-solid fa-trash" style="color:#ef4444;"></i></button>
+                                <button class="btn-icon" onclick="navigator.clipboard.writeText(\`${data.content.replace(/`/g, "'")}\`); showToast('Copied from Vault.', 'success')"><i class="fa-regular fa-copy"></i> Copy</button>
+                            </div>
+                        `;
+                        container.appendChild(div);
+                    });
+                } catch(e) {
+                    container.innerHTML = '<p style="color:#ef4444; grid-column: 1/-1;">Error loading vault.</p>';
+                    console.error(e);
+                }
+            },
+
+            deleteVaultItem: async (docId) => {
+                if(!confirm("Delete this item?")) return;
+                try {
+                    await deleteDoc(doc(db, "users", currentUser.uid, "creator_vault", docId));
+                    showToast("Item deleted.", "success");
+                    appModule.loadVault();
+                } catch(e) {
+                    showToast("Failed to delete.", "error");
+                }
+            }
+        };
+
+        // Initialize App
+        authModule.init();
+        
+        // Handle image upload preview (Uiverse component interaction)
+        document.getElementById('file').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if(file) {
+                if(file.size > 2 * 1024 * 1024) return showToast("File too large. Max 2MB.", "error");
+                showToast(`Image loaded: ${file.name}`, "info");
+                // In production, upload to Firebase Storage or pass as Base64 to Cloud Vision API
+            }
+        });
+    </script>
+</body>
+</html>
