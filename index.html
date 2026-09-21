@@ -920,12 +920,13 @@
            ========================================================================== */
         // USER MUST REPLACE THESE VALUES (Documented in README)
         const firebaseConfig = {
-            apiKey: "YOUR_FIREBASE_API_KEY",
-            authDomain: "YOUR_PROJECT.firebaseapp.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_SENDER_ID",
-            appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAhl-2sOXzSfhumI_nQmoRRphC7VviGzn8",
+  authDomain: "pentube.firebaseapp.com",
+  projectId: "pentube",
+  storageBucket: "pentube.firebasestorage.app",
+  messagingSenderId: "552210089921",
+  appId: "1:552210089921:web:5fefb4c6c35cbfc788d140",
+  measurementId: "G-02WQNJ8D4S"
         };
         
         // ADMIN AUTHORIZATION (Frontend toggle only. Backend must use custom claims).
@@ -938,7 +939,7 @@
             app = initializeApp(firebaseConfig);
             auth = getAuth(app);
             db = getFirestore(app);
-            if(firebaseConfig.apiKey === "YOUR_FIREBASE_API_KEY") throw new Error("Unconfigured");
+            if(firebaseConfig.apiKey === "AIzaSyAhl-2sOXzSfhumI_nQmoRRphC7VviGzn8") throw new Error("Unconfigured");
         } catch (e) {
             console.warn("Firebase not configured. Running in Demo Mode.");
             isDemoMode = true;
