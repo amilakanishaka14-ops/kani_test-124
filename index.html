@@ -915,11 +915,14 @@
         import { getFirestore, collection, addDoc, query, where, getDocs, deleteDoc, doc, serverTimestamp, orderBy } 
             from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-        /* ==========================================================================
-           1. CONFIGURATION & STATE
-           ========================================================================== */
-        // USER MUST REPLACE THESE VALUES (Documented in README)
-        const firebaseConfig = {
+    // 1. අවශ්‍ය Firebase functions import කරගන්න
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
+
+// 2. ඔයාගේ Firebase configuration එක
+const firebaseConfig = {
   apiKey: "AIzaSyAhl-2sOXzSfhumI_nQmoRRphC7VviGzn8",
   authDomain: "pentube.firebaseapp.com",
   projectId: "pentube",
@@ -927,25 +930,28 @@
   messagingSenderId: "552210089921",
   appId: "1:552210089921:web:5fefb4c6c35cbfc788d140",
   measurementId: "G-02WQNJ8D4S"
-        };
-        
-        // ADMIN AUTHORIZATION (Frontend toggle only. Backend must use custom claims).
-        const ADMIN_UID = "REPLACE_WITH_REAL_ADMIN_UID"; 
+};
 
-        // Initialize Firebase (wrapped in try-catch for local demo gracefully)
-        let app, auth, db;
-        let isDemoMode = false;
-        try {
-            app = initializeApp(firebaseConfig);
-            auth = getAuth(app);
-            db = getFirestore(app);
-            if(firebaseConfig.apiKey === "AIzaSyAhl-2sOXzSfhumI_nQmoRRphC7VviGzn8") throw new Error("Unconfigured");
-        } catch (e) {
-            console.warn("Firebase not configured. Running in Demo Mode.");
-            isDemoMode = true;
-        }
+const ADMIN_UID = "REPLACE_WITH_REAL_ADMIN_UID"; 
 
-        let currentUser = null;
+let app, auth, db, analytics;
+let isDemoMode = false;
+let currentUser = null;
+
+// 3. Firebase Initialize කිරීම
+try {
+    app = initializeApp(firebaseConfig);
+    auth = getAuth(app);
+    db = getFirestore(app);
+    analytics = getAnalytics(app);
+    
+    // කලින් තිබ්බ error throw කරන line එක අයින් කළා.
+    console.log("Firebase Initialized Successfully!");
+
+} catch (e) {
+    console.warn("Firebase connection failed. Running in Demo Mode.", e);
+    isDemoMode = true;
+}
 
         /* ==========================================================================
            2. UI UTILITIES
