@@ -428,6 +428,98 @@
             .mobile-toggle { display: block; }
             .auth-wrapper .form { width: 100%; padding: 20px;}
         }
+
+        /* Scrolling Ticker Section */
+.scrolling-section {
+    background: rgba(10, 10, 18, 0.85);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-glass);
+    border-bottom: 1px solid var(--border-glass);
+    overflow: hidden;
+    padding: 2.5rem 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Fade Out Effects on edges */
+.scrolling-section::before,
+.scrolling-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.scrolling-section::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-base) 0%, transparent 100%);
+}
+
+.scrolling-section::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-base) 0%, transparent 100%);
+}
+
+/* Continuous Scroll Animation */
+.ticker-track {
+    display: inline-flex;
+    align-items: center;
+    animation: scrollLeft 30s linear infinite;
+}
+
+.scrolling-section:hover .ticker-track {
+    animation-play-state: paused; /* Mouse එක තිබ්බම නතර වෙනවා */
+}
+
+.ticker-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 35px;
+    color: var(--text-main);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.ticker-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 12px rgba(0, 243, 255, 0.3);
+    transition: var(--transition);
+}
+
+.ticker-item:hover img {
+    border-color: var(--neon-magenta);
+    box-shadow: 0 0 20px rgba(255, 0, 229, 0.6);
+    transform: scale(1.1);
+}
+
+.ticker-item p {
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    color: var(--text-main);
+    margin: 0;
+}
+
+.ticker-item span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+}
+
+/* Animation Keyframes */
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
     </style>
 </head>
 <body>
@@ -489,9 +581,9 @@
                     </button>
                 </div>
 
-                <!-- Secondary Button -->
-                <button onclick="navigateTo('app')" class="border border-white/10 hover:border-cyan-400/50 hover:bg-white/5 text-white font-medium py-3 px-6 rounded-xl transition-all backdrop-blur-sm">
-                    Explore Features
+                   <!-- Secondary Button -->
+                <button onclick="window.location.href='explore.html'" class="border border-white/10 hover:border-cyan-400/50 hover:bg-white/5 text-white font-medium py-3 px-6 rounded-xl transition-all backdrop-blur-sm">
+                   Keyword Explorer
                 </button>
             </div>
 
@@ -849,6 +941,108 @@
         </section>
 
     </main>
+
+    <div class="scrolling-section">
+  <div class="ticker-track">
+    
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=CodeWithLakshan&background=00f3ff&color=050508&bold=true" alt="CodeWithLakshan">
+      <p>CodeWithLakshan</p>
+      <span>34K Subs • Tech</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=PixelQuest+LK&background=ff00e5&color=ffffff&bold=true" alt="PixelQuest LK">
+      <p>PixelQuest LK</p>
+      <span>18K Subs • Gaming</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=FinTalk+SL&background=8a2be2&color=ffffff&bold=true" alt="FinTalk SL">
+      <p>FinTalk SL</p>
+      <span>52K Subs • Finance</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=CyberDev&background=00f3ff&color=050508&bold=true" alt="Cyber Dev">
+      <p>Cyber Dev</p>
+      <span>12K Subs • Tech</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=DailyDose+Vlogs&background=ff00e5&color=ffffff&bold=true" alt="DailyDose Vlogs">
+      <p>DailyDose Vlogs</p>
+      <span>45K Subs • Lifestyle</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=GamerNipuna&background=8a2be2&color=ffffff&bold=true" alt="GamerNipuna">
+      <p>GamerNipuna</p>
+      <span>67K Subs • Gaming</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=EduPulse&background=00f3ff&color=050508&bold=true" alt="EduPulse">
+      <p>EduPulse</p>
+      <span>29K Subs • Education</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=NeonBeats+LK&background=ff00e5&color=ffffff&bold=true" alt="NeonBeats LK">
+      <p>NeonBeats LK</p>
+      <span>81K Subs • Music</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=CodeWithLakshan&background=00f3ff&color=050508&bold=true" alt="CodeWithLakshan">
+      <p>CodeWithLakshan</p>
+      <span>34K Subs • Tech</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=PixelQuest+LK&background=ff00e5&color=ffffff&bold=true" alt="PixelQuest LK">
+      <p>PixelQuest LK</p>
+      <span>18K Subs • Gaming</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=FinTalk+SL&background=8a2be2&color=ffffff&bold=true" alt="FinTalk SL">
+      <p>FinTalk SL</p>
+      <span>52K Subs • Finance</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=CyberDev&background=00f3ff&color=050508&bold=true" alt="Cyber Dev">
+      <p>Cyber Dev</p>
+      <span>12K Subs • Tech</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=DailyDose+Vlogs&background=ff00e5&color=ffffff&bold=true" alt="DailyDose Vlogs">
+      <p>DailyDose Vlogs</p>
+      <span>45K Subs • Lifestyle</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=GamerNipuna&background=8a2be2&color=ffffff&bold=true" alt="GamerNipuna">
+      <p>GamerNipuna</p>
+      <span>67K Subs • Gaming</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=EduPulse&background=00f3ff&color=050508&bold=true" alt="EduPulse">
+      <p>EduPulse</p>
+      <span>29K Subs • Education</span>
+    </div>
+
+    <div class="ticker-item">
+      <img src="https://ui-avatars.com/api/?name=NeonBeats+LK&background=ff00e5&color=ffffff&bold=true" alt="NeonBeats LK">
+      <p>NeonBeats LK</p>
+      <span>81K Subs • Music</span>
+    </div>
+
+  </div>
+</div>
 
     <!-- FOOTER -->
      <footer class="mt-auto border-t border-white/10 bg-[#020204] relative z-20 w-full pt-16 pb-8 px-6 md:px-12">
