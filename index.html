@@ -907,7 +907,7 @@
         </div>
     </footer>
 
-    <!-- Firebase SDKs (v10 modular via CDN) -->
+ <!-- Firebase SDKs (v10 modular via CDN) -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } 
@@ -918,29 +918,33 @@
         /* ==========================================================================
            1. CONFIGURATION & STATE
            ========================================================================== */
-        // USER MUST REPLACE THESE VALUES (Documented in README)
+        
+        // ඔයාගේ ඇත්තම Firebase Configuration එක
         const firebaseConfig = {
-            apiKey: "YOUR_FIREBASE_API_KEY",
-            authDomain: "YOUR_PROJECT.firebaseapp.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_SENDER_ID",
-            appId: "YOUR_APP_ID"
+            apiKey: "AIzaSyAhl-2sOXzSfhumI_nQmoRRphC7VviGzn8",
+            authDomain: "pentube.firebaseapp.com",
+            projectId: "pentube",
+            storageBucket: "pentube.firebasestorage.app",
+            messagingSenderId: "552210089921",
+            appId: "1:552210089921:web:5fefb4c6c35cbfc788d140",
+            measurementId: "G-02WQNJ8D4S"
         };
         
-        // ADMIN AUTHORIZATION (Frontend toggle only. Backend must use custom claims).
+        // ADMIN AUTHORIZATION 
         const ADMIN_UID = "REPLACE_WITH_REAL_ADMIN_UID"; 
 
-        // Initialize Firebase (wrapped in try-catch for local demo gracefully)
         let app, auth, db;
         let isDemoMode = false;
+        
+        // Demo mode එකට යවන error throw කරන line එක මම මෙතනින් අයින් කළා. 
+        // දැන් කෙලින්ම ඔයාගේ Firebase එකට connect වෙනවා.
         try {
             app = initializeApp(firebaseConfig);
             auth = getAuth(app);
             db = getFirestore(app);
-            if(firebaseConfig.apiKey === "YOUR_FIREBASE_API_KEY") throw new Error("Unconfigured");
+            console.log("Firebase Connected Successfully!");
         } catch (e) {
-            console.warn("Firebase not configured. Running in Demo Mode.");
+            console.warn("Firebase not configured properly. Running in Demo Mode.", e);
             isDemoMode = true;
         }
 
